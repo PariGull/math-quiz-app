@@ -9,10 +9,29 @@
 <body>
     <h1>Math Quiz</h1>
     <div id="quiz-container">
-        <p id="question">What is 5 + 3?</p>
-        <input type="text" id="answer" placeholder="Your answer">
-        <button onclick="checkAnswer()">Submit</button>
+        <div id="question-section">
+            <label>
+                Number 1:
+                <input type="number" id="num1" placeholder="Enter first number">
+            </label>
+            <select id="operator">
+                <option value="+">+</option>
+                <option value="-">−</option>
+                <option value="*">×</option>
+                <option value="/">÷</option>
+            </select>
+            <label>
+                Number 2:
+                <input type="number" id="num2" placeholder="Enter second number">
+            </label>
+        </div>
+        <button id="generate-btn">Generate Question</button>
+        <div id="question" style="margin: 16px 0; font-size: 1.2em;"></div>
+        <input type="number" id="answer" placeholder="Your answer">
+        <button id="submit-btn">Submit</button>
+        <button id="next-btn" style="display:none;">Next Question</button>
         <p id="feedback"></p>
+        <p id="score"></p>
     </div>
     <script src="script.js"></script>
 </body>
